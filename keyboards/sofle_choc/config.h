@@ -18,6 +18,11 @@
 
 #include "config_common.h"
 
+#define SPLIT_WPM_ENABLE
+#define SPLIT_OLED_ENABLE
+#define SPLIT_LAYER_STATE_ENABLE
+
+
 // Key matrix size
 // Rows are doubled-up
 #define MATRIX_ROWS 10
@@ -36,12 +41,17 @@
 #define ENCODERS_PAD_A_RIGHT { F4 }
 #define ENCODERS_PAD_B_RIGHT { F5 }
 
+// Double tap the side button to enter bootloader //
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+//#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
+
 // Communication between sides
 #define SOFT_SERIAL_PIN D2
 
 #ifdef RGB_MATRIX_ENABLE
 #define RGB_DI_PIN D3
-#define RGBLED_NUM 29
+#define RGBLED_NUM 58
 #define RGB_MATRIX_LED_COUNT 58
 #define RGB_MATRIX_SPLIT { 29, 29 }
 #endif
