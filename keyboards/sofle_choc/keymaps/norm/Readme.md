@@ -28,7 +28,11 @@ then run `qmk setup`
 
     qmk compile -kb sofle_choc -km norm -e CONVERT_TO=kb2040
     sudo mount -t drvfs F: /mnt/f
+<<<<<<< Updated upstream
     # reset the controller (double click the resetS)
+=======
+    # reset the controller (double click the reset)
+>>>>>>> Stashed changes
     cp sofle_choc_norm_kb2040.uf2 /mnt/f
     
 
